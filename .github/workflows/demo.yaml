@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: acions/chekout@v3
+        uses: actions/chekout@v3
       - name: Install dependencies
         run: npm ci
       - name: Lint
@@ -28,6 +28,9 @@ jobs:
     steps:
       - name: upload Artifacts
         uses: actions/upload-artifact@v3
+        with:
+         name: dist-folder
+         path: dist
         with:
          name: dist-folder
 
