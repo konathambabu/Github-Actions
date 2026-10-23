@@ -31,6 +31,6 @@ jobs:
       with:
         name: dist-folder
         path: dist
-      path:
-        dist
-        package.json
+
+
+
