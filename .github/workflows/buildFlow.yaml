@@ -9,7 +9,7 @@ jobs:
       - name: print msg
         run: echo "test code"
       - name: Upload Build Artifacts
-        uses: @actions/upload-artifact
+        uses: actions/upload-artifact@v7
         with:
           name: my-artifact
           path: dist/
