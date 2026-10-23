@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        run: echo "test code"
+        run: actions/checkout@v3
+             echo "test code"
