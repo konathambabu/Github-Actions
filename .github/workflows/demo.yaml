@@ -1,0 +1,43 @@
+
+
+name: Build & Deploy
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: acions/chekout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint   
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test code
+        run: npm run test
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: npm run build
+  upload:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+         name: dist-folder
+         path:
+           dist
+           package.json
+      
+      - name: dist-folder
+      
+      - background: 
+    
+    
