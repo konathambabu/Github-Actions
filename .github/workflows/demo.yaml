@@ -30,7 +30,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
          name: dist-folder
-         path: dist
-        with:
+         path:
+          dist
+          package.json
+         path: dist        with:
          name: dist-folder
 
