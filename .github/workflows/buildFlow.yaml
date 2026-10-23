@@ -19,7 +19,7 @@ jobs:
       - name: Get Bild Artifacts
         uses: actions/download-artifact@v7
         with:
-          name: my-artifacts
+          name: my-artifact
       - name: output content
         run: ls
       - name: Deploy
