@@ -22,17 +22,6 @@ jobs:
     steps:
       - name: build
         run: npm run build
-  upload:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: upload Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-         name: dist-folder
-         path:
-          dist
-          package.json
          path: dist        with:
          name: dist-folder
 
