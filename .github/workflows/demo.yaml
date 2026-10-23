@@ -35,9 +35,6 @@ jobs:
          path:
            dist
            package.json
-      
-      - name: dist-folder
-      
       - background: 
     
     
