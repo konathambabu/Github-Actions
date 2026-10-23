@@ -22,6 +22,12 @@ jobs:
     steps:
       - name: build
         run: npm run build
-         path: dist        with:
-         name: dist-folder
-
+  upload:
+    needs: build
+    runs-on: ubuntu-latest
+    uses: actions/upload-artifact@v3
+    with:
+      name: dist-folder
+      path:
+        dist
+        package.jsom
