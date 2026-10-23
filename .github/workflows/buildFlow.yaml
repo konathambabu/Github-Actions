@@ -13,3 +13,15 @@ jobs:
         with:
           name: my-artifact
           path: dist/
+  display:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Bild Artifacts
+        uses: actions/download-artifact@v7
+        with:
+          name: my-artifacts
+      - name: output content
+        run: ls
+      - name: Deploy
+        run: echo "Deploy..."
+      
