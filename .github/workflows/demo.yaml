@@ -25,9 +25,12 @@ jobs:
   upload:
     needs: build
     runs-on: ubuntu-latest
-    uses: actions/upload-artifact@v3
-    with:
-      name: dist-folder
+    steps:
+    - name: upload-artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist-folder
+        path: dist
       path:
         dist
         package.json
